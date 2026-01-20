@@ -41,7 +41,7 @@ export function Navbar() {
           to="/" 
           className="font-serif text-2xl font-semibold text-foreground hover:text-primary transition-colors"
         >
-          Portfolio
+          Huda<span className="text-primary">.</span>
         </Link>
 
         {/* Desktop Navigation */}

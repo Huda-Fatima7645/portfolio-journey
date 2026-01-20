@@ -72,13 +72,13 @@ const Education = () => {
         </section>
 
         {/* Achievements Summary */}
-        <section className="py-12 bg-muted/20">
+        <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-6">
               {achievements.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 bg-card rounded-xl p-5 shadow-soft border border-border/50"
+                  className="flex items-center gap-4 bg-card rounded-xl p-5 shadow-soft border border-border/50 h-full"
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <item.icon className="w-6 h-6 text-primary" />
@@ -106,8 +106,8 @@ const Education = () => {
                     {/* Left: Main Info */}
                     <div className="lg:w-2/3">
                       <div className="flex items-start gap-4 mb-6">
-                        <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center shrink-0">
-                          <GraduationCap className="w-8 h-8 text-secondary-foreground" />
+                        <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                          <GraduationCap className="w-8 h-8 text-primary" />
                         </div>
                         <div>
                           <h2 className="font-serif text-2xl font-bold mb-1">
@@ -128,7 +128,7 @@ const Education = () => {
                           {edu.courses.map((course) => (
                             <span
                               key={course}
-                              className="bg-secondary text-secondary-foreground text-sm px-3 py-1 rounded-lg"
+                              className="bg-secondary text-secondary-foreground text-sm px-3 py-1.5 rounded-lg font-medium"
                             >
                               {course}
                             </span>
@@ -136,8 +136,8 @@ const Education = () => {
                         </div>
                       </div>
 
-                      <div className="inline-flex items-center gap-2 bg-accent/50 text-accent-foreground px-4 py-2 rounded-lg">
-                        <span className="font-medium">GPA:</span> {edu.gpa}
+                      <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg font-medium">
+                        <span>GPA:</span> {edu.gpa}
                       </div>
                     </div>
 

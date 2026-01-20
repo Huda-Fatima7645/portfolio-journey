@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
@@ -28,7 +28,7 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 bg-muted/20">
+    <section id="projects" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div>
@@ -39,23 +39,17 @@ export function ProjectsSection() {
               A selection of projects that showcase my skills in React development and AI integration.
             </p>
           </div>
-          <Button variant="ghost" className="mt-4 md:mt-0 group" asChild>
-            <Link to="/projects">
-              View All Projects
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+          {projects.map((project) => (
             <Link
               key={project.id}
               to={`/projects/${project.id}`}
               className="group"
             >
-              <div className="bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 border border-border/50">
-                <div className="aspect-video bg-muted relative overflow-hidden">
+              <div className="bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-300 hover:-translate-y-2 border border-border/50 h-full flex flex-col">
+                <div className="aspect-[16/10] bg-muted relative overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -63,18 +57,18 @@ export function ProjectsSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="font-serif text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                  <p className="text-muted-foreground text-sm mb-4 flex-1">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="bg-secondary text-secondary-foreground text-xs px-2 py-1 rounded-md"
+                        className="bg-secondary text-secondary-foreground text-xs px-2.5 py-1 rounded-md font-medium"
                       >
                         {tag}
                       </span>
@@ -84,6 +78,15 @@ export function ProjectsSection() {
               </div>
             </Link>
           ))}
+        </div>
+
+        <div className="text-center">
+          <Button variant="default" size="lg" className="group" asChild>
+            <Link to="/projects">
+              View All Projects
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -30,23 +30,17 @@ export function EducationSection() {
               My academic journey that shaped my foundation in computer science and technology.
             </p>
           </div>
-          <Button variant="ghost" className="mt-4 md:mt-0 group" asChild>
-            <Link to="/education">
-              View All Details
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6 mb-10">
           {education.map((edu, index) => (
             <div
               key={index}
               className="bg-card rounded-2xl p-6 md:p-8 shadow-soft hover:shadow-card transition-all duration-300 border border-border/50 group"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-                <div className="w-16 h-16 rounded-xl bg-secondary flex items-center justify-center shrink-0">
-                  <GraduationCap className="w-8 h-8 text-secondary-foreground" />
+                <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-8 h-8 text-primary" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-serif text-xl md:text-2xl font-semibold mb-1 group-hover:text-primary transition-colors">
@@ -56,7 +50,7 @@ export function EducationSection() {
                 </div>
                 <div className="md:text-right">
                   <p className="text-sm text-muted-foreground mb-2">{edu.year}</p>
-                  <div className="inline-flex items-center gap-2 bg-accent/50 text-accent-foreground px-3 py-1 rounded-full text-sm">
+                  <div className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm">
                     <Award className="w-4 h-4" />
                     {edu.highlight}
                   </div>
@@ -64,6 +58,15 @@ export function EducationSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center">
+          <Button variant="default" size="lg" className="group" asChild>
+            <Link to="/education">
+              View All Education & Awards
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
