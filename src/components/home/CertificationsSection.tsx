@@ -44,12 +44,12 @@ export function CertificationsSection() {
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="bg-card rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300 border border-border/50 group hover:-translate-y-1"
+              className="bg-card rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300 border border-border/50 group hover:-translate-y-1 h-full flex flex-col"
             >
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                 <Award className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+              <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors flex-1">
                 {cert.name}
               </h3>
               <p className="text-sm text-muted-foreground mb-3">{cert.issuer}</p>

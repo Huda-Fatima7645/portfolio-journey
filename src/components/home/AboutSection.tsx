@@ -20,7 +20,7 @@ const skills = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-muted/20">
+    <section id="about" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
@@ -34,11 +34,11 @@ export function AboutSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
             <div
               key={skill.title}
-              className="bg-card-gradient rounded-2xl p-8 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border/50"
+              className="bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 border border-border/50 h-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
