@@ -1,4 +1,4 @@
-import { ArrowDown, Sparkles, Code2, Brain } from "lucide-react";
+import { ArrowDown, Sparkles, Code2, Brain, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -51,6 +51,12 @@ export function HeroSection() {
             </Button>
             <Button variant="outline" size="lg" asChild>
               <a href="#contact">Get In Touch</a>
+            </Button>
+            <Button variant="glass" size="lg" asChild>
+              <a href="/resume.pdf" download>
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>
