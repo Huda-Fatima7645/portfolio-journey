@@ -1,22 +1,23 @@
-import { Code2, Brain, Palette } from "lucide-react";
+import { Code2, Brain, Palette, Database } from "lucide-react";
 
 const skills = [
   {
     icon: Code2,
-    title: "Frontend Development",
-    description: "Expertise in React.js, TypeScript, and modern CSS frameworks like Tailwind.",
+    title: "Frontend Development (Next.js)",
+    description: "Building fast, responsive web apps with Next.js, React.js, TypeScript, and modern UI frameworks.",
   },
   {
     icon: Brain,
     title: "AI & Machine Learning",
-    description: "Currently diving deep into neural networks, NLP, and computer vision.",
+    description: "Hands-on ML with Python and scikit-learn, and actively learning deep learning and NLP for real-world applications.",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "Creating intuitive and beautiful user interfaces with attention to detail.",
+    icon: Database,
+    title: "Databases & Backend Integration",
+    description: "Working with SQL databases (MySQL/PostgreSQL) and integrating REST APIs for complete, data-driven products.",
   },
 ];
+
 
 export function AboutSection() {
   return (

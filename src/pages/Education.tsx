@@ -4,31 +4,55 @@ import { GraduationCap, Award, Trophy, Star, BookOpen } from "lucide-react";
 
 const education = [
   {
-    degree: "Master of Science in Computer Science",
-    school: "University Name",
-    location: "City, Country",
-    year: "2020 - 2022",
-    gpa: "3.9/4.0",
-    description: "Specialized in Artificial Intelligence and Machine Learning. Thesis focused on Natural Language Processing applications in healthcare.",
-    courses: ["Deep Learning", "Natural Language Processing", "Computer Vision", "Reinforcement Learning"],
+    degree: "BE Software Engineering",
+    school:
+      "School of Electrical Engineering and Computer Science (SEECS), National University of Sciences & Technology (NUST)",
+    location: "Islamabad, Pakistan",
+    year: "2019 - 2023",
+    gpa: "CGPA: 3.28/4.0",
+    description:
+      "Built a strong foundation in software engineering, algorithms, and data-driven systems. Completed a full-stack final year project and gained hands-on experience in ML using Python and scikit-learn.",
+    courses: [
+      "Machine Learning",
+      "Data Structures & Algorithms",
+      "Design & Analysis of Algorithms",
+      "Probability & Statistics",
+      "Linear Algebra & ODEs",
+      "Data Warehousing & Mining",
+      "Internet of Things",
+      "OOP in Java",
+      "Python Programming",
+    ],
+    awards: ["Washington Accord Accredited Program"],
+  },
+  {
+    degree: "Higher Secondary School Certificate (HSSC – ICS), Computer Science",
+    school: "KIPS College for Girls (BISE Faisalabad)",
+    location: "Faisalabad, Pakistan",
+    year: "2017 - 2019",
+    gpa: "Score: 93% (1023/1100)",
+    description:
+      "Focused on Computer Science with strong academic performance and recognition through scholarships and medals.",
+    courses: ["Computer Science", "Mathematics", "Physics"],
     awards: [
-      "Graduate Research Fellowship",
-      "Best Thesis Award",
-      "Academic Excellence Scholarship",
+      "Silver Medalist for Regional Academic Excellence",
+      "Quaid-e-Azam Merit Scholarship",
+      "Gold Medal (Sadique Bani Nazarat-e-Taleem Pakistan)",
     ],
   },
   {
-    degree: "Bachelor of Science in Computer Science",
-    school: "University Name",
-    location: "City, Country",
-    year: "2016 - 2020",
-    gpa: "3.8/4.0",
-    description: "Strong foundation in software engineering, algorithms, and data structures. Active member of the Computer Science Society.",
-    courses: ["Data Structures", "Algorithms", "Database Systems", "Web Development", "Software Engineering"],
+    degree: "Secondary School Certificate (SSC – Matric), Science",
+    school: "Masoomeen Foundation Girls High School (BISE Faisalabad)",
+    location: "Chiniot, Pakistan",
+    year: "2015 - 2017",
+    gpa: "Score: 95% (1046/1100)",
+    description:
+      "Science track with strong academic performance and merit-based recognition.",
+    courses: ["Computer Science", "Mathematics", "Physics"],
     awards: [
-      "Dean's List (All Semesters)",
-      "Outstanding Senior Award",
-      "Hackathon Winner 2019",
+      "PEEF Merit Scholarship Recipient",
+      "Chief Minister Laptop Scheme Winner",
+      "Physics Quiz Competition Winner",
     ],
   },
 ];
@@ -36,18 +60,20 @@ const education = [
 const achievements = [
   {
     icon: Trophy,
-    title: "Hackathon Champion",
-    description: "Won 1st place in National Tech Hackathon 2023",
+    title: "Intra-School Badminton Winner (Doubles)",
+    description:
+      "Won the intra-school doubles competition as a member of the department badminton team.",
   },
   {
     icon: Star,
-    title: "Top Performer",
-    description: "Recognized as top 5% in graduating class",
+    title: "IELTS 7.5 Overall",
+    description: "Listening 8.5 | Reading 7.5 | Writing 7.0 | Speaking 7.0",
   },
   {
     icon: BookOpen,
-    title: "Published Research",
-    description: "2 papers published in peer-reviewed journals",
+    title: "ML + Full-Stack Final Year Project",
+    description:
+      "Built a full-stack marketplace and integrated a Python (scikit-learn) ML model for price prediction.",
   },
 ];
 
@@ -64,8 +90,10 @@ const Education = () => {
                 My <span className="text-gradient">Education</span>
               </h1>
               <p className="text-lg text-muted-foreground">
-                A journey through academia that built my foundation in computer science, 
-                research methodology, and problem-solving skills.
+                My academic background built a strong base in software
+                engineering, algorithms, and data-driven development; supporting
+                my current work in modern web applications and applied machine
+                learning.
               </p>
             </div>
           </div>
@@ -85,7 +113,9 @@ const Education = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -120,7 +150,9 @@ const Education = () => {
                         </div>
                       </div>
 
-                      <p className="text-muted-foreground mb-6">{edu.description}</p>
+                      <p className="text-muted-foreground mb-6">
+                        {edu.description}
+                      </p>
 
                       <div className="mb-6">
                         <h4 className="font-medium mb-3">Key Courses</h4>
@@ -137,7 +169,7 @@ const Education = () => {
                       </div>
 
                       <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg font-medium">
-                        <span>GPA:</span> {edu.gpa}
+                        <span>Result:</span> {edu.gpa}
                       </div>
                     </div>
 
@@ -149,10 +181,7 @@ const Education = () => {
                       </h4>
                       <ul className="space-y-3">
                         {edu.awards.map((award, i) => (
-                          <li
-                            key={i}
-                            className="flex items-start gap-3 text-sm"
-                          >
+                          <li key={i} className="flex items-start gap-3 text-sm">
                             <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
                             {award}
                           </li>

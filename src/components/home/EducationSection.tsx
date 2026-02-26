@@ -1,21 +1,7 @@
 import { Link } from "react-router-dom";
 import { GraduationCap, Award, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const education = [
-  {
-    degree: "Master of Science in Computer Science",
-    school: "University Name",
-    year: "2020 - 2022",
-    highlight: "Graduated with Distinction",
-  },
-  {
-    degree: "Bachelor of Science in Computer Science",
-    school: "University Name",
-    year: "2016 - 2020",
-    highlight: "Dean's List | GPA: 3.8/4.0",
-  },
-];
+import { education, Education } from "./EducationData";
 
 export function EducationSection() {
   return (
@@ -33,7 +19,7 @@ export function EducationSection() {
         </div>
 
         <div className="space-y-6 mb-10">
-          {education.map((edu, index) => (
+          {education.slice(0,1).map((edu : Education, index) => (
             <div
               key={index}
               className="bg-card rounded-2xl p-6 md:p-8 shadow-soft hover:shadow-card transition-all duration-300 border border-border/50 group"
@@ -52,7 +38,7 @@ export function EducationSection() {
                   <p className="text-sm text-muted-foreground mb-2">{edu.year}</p>
                   <div className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm">
                     <Award className="w-4 h-4" />
-                    {edu.highlight}
+                    {edu?.highlight}
                   </div>
                 </div>
               </div>

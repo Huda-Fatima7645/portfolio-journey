@@ -2,30 +2,25 @@ import { Award, BadgeCheck, Calendar } from "lucide-react";
 
 const certifications = [
   {
-    name: "AWS Certified Cloud Practitioner",
-    issuer: "Amazon Web Services",
-    date: "2023",
-    credentialId: "ABC123XYZ",
-  },
-  {
-    name: "React Professional Developer",
-    issuer: "Meta",
-    date: "2023",
-    credentialId: "META-REACT-456",
-  },
-  {
-    name: "TensorFlow Developer Certificate",
-    issuer: "Google",
+    name: "Web Development Bootcamp",
+    issuer: "Udemy",
     date: "2024",
-    credentialId: "TF-DEV-789",
+    image: "/certificates/web dev.jpg",
   },
   {
-    name: "Machine Learning Specialization",
-    issuer: "Coursera / Stanford",
+    name: "React - The Complete Guide",
+    issuer: "Udemy",
     date: "2024",
-    credentialId: "ML-SPEC-101",
+    image: "/certificates/react.jpg",
+  },
+  {
+    name: "Scrum Fundamentals Certified (SFC)",
+    issuer: "SCRUMstudy",
+    date: "2021",
+    image: "/certificates/SCRUMstudy_Huda  Fatima.jpg",
   },
 ];
+
 
 export function CertificationsSection() {
   return (
@@ -46,9 +41,15 @@ export function CertificationsSection() {
               key={index}
               className="bg-card rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300 border border-border/50 group hover:-translate-y-1 h-full flex flex-col"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <Award className="w-6 h-6 text-primary" />
-              </div>
+              {cert.image && (
+                <a href={cert.image} target="_blank" rel="noopener noreferrer" className="mb-4 block">
+                  <img
+                    src={cert.image}
+                    alt={cert.name + ' certificate'}
+                    className="w-full h-32 object-contain rounded-md border border-border/30 shadow"
+                  />
+                </a>
+              )}
               <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors flex-1">
                 {cert.name}
               </h3>
