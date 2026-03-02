@@ -89,7 +89,7 @@ export function ContactSection() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
-            {/* Contact Info */}
+            {/* Contact Info */} 
             <div className="space-y-8">
               <div>
                 <h3 className="font-serif text-2xl font-semibold mb-6">Get in Touch</h3>
