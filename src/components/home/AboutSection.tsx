@@ -14,7 +14,7 @@ const skills = [
   {
     icon: Database,
     title: "Databases & Backend Integration",
-    description: "Working with SQL databases (MySQL/PostgreSQL) and integrating REST APIs for complete, data-driven products.",
+    description: "Building Node.js backends with SQL databases (MySQL) and REST APIs for reliable, data-driven applications.",
   },
 ];
 
@@ -31,7 +31,7 @@ export function AboutSection() {
             I'm a passionate software engineer with 2 years of professional experience 
             in building responsive, user-centric web applications. My journey has been 
             focused on React.js, and now I'm expanding my horizons into the fascinating 
-            realm of Artificial Intelligence.
+            realm of Artificial Intelligence and Data Science.
           </p>
         </div>
 

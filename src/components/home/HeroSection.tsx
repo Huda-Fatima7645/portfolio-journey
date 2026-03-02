@@ -42,7 +42,7 @@ export function HeroSection() {
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
             2+ years crafting beautiful React applications. Now exploring the exciting 
-            world of Artificial Intelligence and Machine Learning.
+            world of Artificial Intelligence and Data Science.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "0.3s" }}>
