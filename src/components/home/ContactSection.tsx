@@ -78,7 +78,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-24 bg-muted/20">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
               Let's <span className="text-gradient">Connect</span>
@@ -88,7 +88,7 @@ export function ContactSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
@@ -128,7 +128,7 @@ export function ContactSection() {
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 md:col-span-2">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium mb-2 block">Name</label>

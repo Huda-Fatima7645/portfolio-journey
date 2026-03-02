@@ -19,6 +19,12 @@ const certifications = [
     date: "2021",
     image: "/certificates/SCRUMstudy_Huda  Fatima.jpg",
   },
+  {
+    name: "The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert",
+    issuer: "Udemy",
+    date: "2021",
+    // image: "/certificates/mysql.jpg",
+  }
 ];
 
 
@@ -41,7 +47,7 @@ export function CertificationsSection() {
               key={index}
               className="bg-card rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300 border border-border/50 group hover:-translate-y-1 h-full flex flex-col"
             >
-              {cert.image && (
+              {cert.image ?(
                 <a href={cert.image} target="_blank" rel="noopener noreferrer" className="mb-4 block">
                   <img
                     src={cert.image}
@@ -49,6 +55,10 @@ export function CertificationsSection() {
                     className="w-full h-32 object-contain rounded-md border border-border/30 shadow"
                   />
                 </a>
+              ): 
+              (<div className="w-full h-32 bg-muted/20 rounded-md flex items-center justify-center mb-4">
+                <Award className="w-10 h-10 text-muted-foreground" />
+              </div>
               )}
               <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors flex-1">
                 {cert.name}
@@ -58,10 +68,10 @@ export function CertificationsSection() {
                 <Calendar className="w-3 h-3" />
                 {cert.date}
               </div>
-              <div className="flex items-center gap-2 text-xs text-primary mt-2">
+              {/* <div className="flex items-center gap-2 text-xs text-primary mt-2">
                 <BadgeCheck className="w-3 h-3" />
                 Verified
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

@@ -41,7 +41,7 @@ export function ExperienceSection() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className=" mx-auto">
           <div className="relative bg-card rounded-3xl shadow-card border border-border/50 overflow-hidden">
             {/* Decorative accent bar */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-primary/60 to-transparent" />
