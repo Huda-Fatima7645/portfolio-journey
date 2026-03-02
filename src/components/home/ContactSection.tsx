@@ -85,7 +85,7 @@ export function ContactSection() {
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
               Have a project in mind or just want to say hello? I'd love to hear from you.
-            </p>
+            </p>  
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
