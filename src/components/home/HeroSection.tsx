@@ -1,5 +1,6 @@
 import { ArrowDown, Sparkles, Code2, Brain, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/config/siteConfig";
 
 export function HeroSection() {
   const scrollToAbout = () => {
@@ -60,13 +61,13 @@ export function HeroSection() {
 
           {/* Social links */}
           <div className="flex justify-center gap-3 mb-10 animate-slide-up" style={{ animationDelay: "0.25s" }}>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-card border border-border/50 shadow-soft flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300">
+            <a href={siteConfig.links.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-card border border-border/50 shadow-soft flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300">
               <Github className="w-4 h-4" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-card border border-border/50 shadow-soft flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300">
+            <a href={siteConfig.links.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-card border border-border/50 shadow-soft flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300">
               <Linkedin className="w-4 h-4" />
             </a>
-            <a href="#contact" className="w-10 h-10 rounded-full bg-card border border-border/50 shadow-soft flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300">
+            <a href={siteConfig.links.email} className="w-10 h-10 rounded-full bg-card border border-border/50 shadow-soft flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300">
               <Mail className="w-4 h-4" />
             </a>
           </div>

@@ -4,14 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { siteConfig } from "@/config/siteConfig";
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   // ✅ Your info
-  const CONTACT_EMAIL = "huda.fatima4950@gmail.com";
-  const LOCATION = "Chiniot, Pakistan";
+  const CONTACT_EMAIL = siteConfig.links.email;
+  const LOCATION = siteConfig.links.location;
   const RESPONSE_TIME = "Within 24 hours";
 
   // ✅ Dynamic form state (controlled inputs)

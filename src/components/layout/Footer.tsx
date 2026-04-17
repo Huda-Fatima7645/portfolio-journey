@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { siteConfig } from "@/config/siteConfig";
 
 export function Footer() {
   return (
@@ -36,7 +37,7 @@ export function Footer() {
             <h4 className="font-medium mb-3">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="https://github.com/Huda-Fatima7645"
+                href={siteConfig.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -44,7 +45,7 @@ export function Footer() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/huda-fatima-08340a244/"
+                href={siteConfig.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -52,7 +53,7 @@ export function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:huda.fatima4950@gmail.com"
+                href={`mailto:${siteConfig.links.email}`}
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5" />
